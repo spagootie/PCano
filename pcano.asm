@@ -1,4 +1,4 @@
-mov ah, 00h
+mov ah, 00h  ; clears the screen and makes the cursor invisible
 mov al, 03h
 int 10h
 mov ah, 01h
@@ -8,7 +8,7 @@ mov ah, 02h
 mov dl, 0
 int 10h
 
-input:
+input:              ; takes user input
 	in al, 60h
 	cmp al, 30
 	je seta
@@ -61,7 +61,7 @@ setcolon:
 	jmp playnote
 	
 playnote:
-	mov al, 182 ; playing sounds n shit
+	mov al, 182 ; playing sounds n stuff
 	out 43h, al	
 	mov ax, bx
 	out 42h, al
@@ -71,7 +71,7 @@ playnote:
 	or al, 00000011b
 	out 61h, al
 
-	in al, 60h
+	in al, 60   ; makes it so the note stops when the key is released
 	mov dl, al
 waitforrelease:
 	in al, 60h
