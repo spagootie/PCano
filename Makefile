@@ -1,5 +1,5 @@
 all:
-	nasm -fbin sound.asm -o sound.bin
+	nasm -fbin pcano.asm -o pcano.img
 
 run:
-	qemu-system-x86_64 sound.bin -soundhw pcspk
+	qemu-system-x86_64 pcano.img -soundhw pcspk
