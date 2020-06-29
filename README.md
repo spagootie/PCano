@@ -28,7 +28,7 @@ the Star Wars theme is a,j,f,d,s,;,j,f,d,s,;,j,f,d,f,s.
 
 ASSEMBLING:
 
-Use an intel-syntax assembler, preferably NASM, to assemble to raw binaty format.
+Use an intel-syntax assembler, preferably NASM, to assemble to raw binary format.
 For Linux users, this involves running:
 
 ```
