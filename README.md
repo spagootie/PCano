@@ -22,9 +22,9 @@ boot pcano.img
 
 USAGE:
 
-Use the keys a,s,d,f,j,k,l, and ; to play notes. 
+Use the keys a, s, d, f, j, k, l, and ; to play notes. 
 
-the Star Wars theme is a,j,f,d,s,;,j,f,d,s,;,j,f,d,f,s.
+the Star Wars theme is a, j, f, d, s, ;, j, f, d, s, ;, j, f, d, f, s.
 
 ASSEMBLING:
 
