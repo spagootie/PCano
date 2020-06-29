@@ -3,7 +3,7 @@ mov al, 03h
 int 10h
 mov ah, 01h
 mov cx, 2607h
-;int 10h
+int 10h
 mov ah, 02h
 mov dl, 0
 int 10h
