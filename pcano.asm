@@ -71,7 +71,7 @@ playnote:
 	or al, 00000011b
 	out 61h, al
 
-	in al, 60   ; makes it so the note stops when the key is released
+	in al, 60h   ; makes it so the note stops when the key is released
 	mov dl, al
 waitforrelease:
 	in al, 60h
