@@ -10,6 +10,12 @@ int 10h
 
 input:              ; takes user input
 	in al, 60h
+	cmp al, 18
+	je lower
+	cmp al, 16
+	je upper
+	cmp al, 17
+	je middle
 	cmp al, 30
 	je seta
 	cmp al, 31
@@ -27,6 +33,18 @@ input:              ; takes user input
 	cmp al, 39
 	je setcolon
 	jmp stopnote	
+
+lower:
+	mov cl, 1 
+	jmp input
+
+middle:
+	mov cl, 0
+	jmp input
+
+upper:
+	mov cl, 2
+	jmp input
 
 seta:
 	mov bx, 4560 
@@ -59,10 +77,30 @@ setl:
 setcolon:
 	mov bx, 2280
 	jmp playnote
+
+octlow:
+	xor dl, dl
+	mov ax, bx
+	mov bx, 2
+	div bx
+	mov bx, ax
+	jmp portnote	
+
+octhigh:
+	mov ax, 2
+	mul bx
+	mov bx, ax
+	jmp portnote
+	
 	
 playnote:
 	mov al, 182 ; playing sounds n stuff
 	out 43h, al	
+	cmp cl, 2
+	je octhigh
+	cmp cl, 1
+	je octlow
+portnote:
 	mov ax, bx
 	out 42h, al
 	mov al, ah
@@ -71,7 +109,7 @@ playnote:
 	or al, 00000011b
 	out 61h, al
 
-	in al, 60   ; makes it so the note stops when the key is released
+	in al, 60h   ; makes it so the note stops when the key is released
 	mov dl, al
 waitforrelease:
 	in al, 60h

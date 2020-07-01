@@ -24,6 +24,8 @@ USAGE:
 
 Use the keys a, s, d, f, j, k, l, and ; to play notes. 
 
+Use the keys q, w, and e to change between three different octaves.
+
 the Star Wars theme is a, j, f, d, s, ;, j, f, d, s, ;, j, f, d, f, s.
 
 ASSEMBLING:
