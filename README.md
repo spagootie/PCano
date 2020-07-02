@@ -26,6 +26,8 @@ Use the keys a, s, d, f, j, k, l, and ; to play notes.
 
 Use the keys q, w, and e to change between three different octaves.
 
+Use the key z to clear the screen.
+
 the Star Wars theme is a, j, f, d, s, ;, j, f, d, s, ;, j, f, d, f, s.
 
 ASSEMBLING:
