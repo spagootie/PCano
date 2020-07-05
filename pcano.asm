@@ -1,15 +1,12 @@
-clear:
-	mov ah, 00h  ; clears the screen and sets the cursor to the first position on the screen
+input:              ; sets cursor to 1st position and clears the screen
+	mov ah, 00h
 	mov al, 03h
 	int 10h
 	mov ah, 02h
 	mov dl, 0
 	int 10h
-
-input:              ; takes user input
+		    ; takes user input
 	in al, 60h
-	cmp al, 44
-	je clear
 	cmp al, 18
 	je lower
 	cmp al, 16
